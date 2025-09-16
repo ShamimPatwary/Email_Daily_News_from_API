@@ -1,9 +1,11 @@
 import requests
 from sending_email import send_mail
+from mail_pass import api, urls
 
-api_key = "6a143001bc014e79a0775016fef5c0dd"
 
-url = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=6a143001bc014e79a0775016fef5c0dd"
+api_key = api
+
+url = urls
 
 # Make request
 request = requests.get(url)
