@@ -12,10 +12,6 @@ def send_mail(massage):
 
     receiver = rec
 
-    message = """\
-    Subject : Test
-    This message is send via python script by Shamim from Shamim"""
-
     with smtplib.SMTP_SSL(host, port, context=context) as server:
         server.login(username, password)
-        server.sendmail(username, receiver, message)
+        server.sendmail(username, receiver, massage)
